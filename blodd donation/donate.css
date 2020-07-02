@@ -5,14 +5,17 @@ body{
     
 font-family: 'Roboto',sans-serif;
 }
-ul{
-    background-image: linear-gradient(315deg, #f55656 0%, #a8192c 74%);
+nav{
+    background-image: linear-gradient(315deg, #f55656 0%, #e23b51 74%);
+}
+ul li {
+    color:white;
 }
 ul li a {
     color:white;
     font-size: 1.5rem;
     text-transform: uppercase;
-    font-family: 'Merriweather',serif;
+    font-family: 'Roboto',sans-serif;
 }
 ul li a:hover{
     color:black;
