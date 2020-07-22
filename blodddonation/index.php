@@ -13,13 +13,14 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar fixed-top navbar-default navbar-expand-lg navbar-light bg-light"
+    >
         <a class="navbar-brand" href="#" style="color: white;">Hidden brand</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" style="color: white;"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01" style="margin-left: 10%;">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01"  >
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
             <li class="nav-item ">
               <a class="nav-link" href="index.php" style="color: white;">Home </a>
             </li>
@@ -46,12 +47,15 @@
     <br><br><br> 
     <!-- donate section -->
     <div class="row">
-      <div class="col-md-6 offset-md-3">
+      <div class="col-md-12 col-sm-12">
         <h2 class="text-center" >Search for donar</h2>
-        <hr class="red-bar" style="background-color: rgb(180,5,5); width: 50%; height: 3px;">
-	
-			<div class="form-inline text-center"   >
-							<div class="form-group text-center center-aligned" >
+        <hr class="red-bar" style="background-color: rgb(180,5,5); width: 45%; height: 3px;">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+			<div class="form-inline text-center" style="margin-left: 33%;"  >
+							<div class="form-group text-center center-aligned"  >
 								<select style="width: 220px; height: 45px;" name="city" id="city" class="form-control demo-default" required>
   <option value="">-- Select --</option><optgroup title="Azad Jammu and Kashmir (Azad Kashmir)" label="&raquo; Azad Jammu and Kashmir (Azad Kashmir)"></optgroup><option value="Bagh" >Bagh</option><option value="Bhimber" >Bhimber</option>
   <option value="Kotli" >Kotli</option><option value="Mirpur" >Mirpur</option><option value="Muzaffarabad" >Muzaffarabad</option><option value="Neelum" >Neelum</option><option value="Poonch" >Poonch</option><option value="Sudhnati" >Sudhnati</option><optgroup title="Balochistan" label="&raquo; Balochistan"></optgroup><option value="Awaran" >Awaran</option><option value="Barkhan" >Barkhan</option><option value="Bolan" >Bolan</option><option value="Chagai" >Chagai</option>
@@ -71,7 +75,7 @@
   <option value="Shekhupura" >Shekhupura</option><option value="Sialkot" >Sialkot</option><option value="Toba Tek Singh" >Toba Tek Singh</option><option value="Vehari" >Vehari</option><optgroup title="Sindh" label="&raquo; Sindh"></optgroup><option value="Badin" >Badin</option><option value="Dadu" >Dadu</option><option value="Ghotki" >Ghotki</option><option value="Hyderabad" >Hyderabad</option><option value="Jacobabad" >Jacobabad</option><option value="Jamshoro" >Jamshoro</option><option value="Karachi" >Karachi</option><option value="Kashmore" >Kashmore</option><option value="Khairpur" >Khairpur</option><option value="Larkana" >Larkana</option><option value="Matiari" >Matiari</option><option value="Mirpur Khas" >Mirpur Khas</option><option value="Naushahro Feroze" >Naushahro Feroze</option><option value="Nawabshah" >Nawabshah</option><option value="Qambar Shahdadkot" >Qambar Shahdadkot</option>
   <option value="Sanghar" >Sanghar</option><option value="Shikarpur" >Shikarpur</option><option value="Sukkur" >Sukkur</option><option value="Tando Allahyar" >Tando Allahyar</option><option value="Tando Muhammad Khan" >Tando Muhammad Khan</option><option value="Tharparkar" >Tharparkar</option><option value="Thatta" >Thatta</option><option value="Umerkot" >Umerkot</option></select>
 							</div>
-							<div class="form-group center-aligned" >
+							<div class="form-group center-aligned" style="text-align: center;" >
 								<select name="blood_group" id="blood_group" style="padding: 0 20px; width: 220px; height: 45px;" class="form-control demo-default text-center margin10px">
 
 									<option value="A+">A+</option>
@@ -87,7 +91,7 @@
               </div>
               
 							<div class="form-group center-aligned">
-								<button type="button" class="btn btn-lg btn-default" id="search" >Search</button>
+								<button type="button" class="btn btn-lg btn-default" id="search" ><i class="fa fa-search" aria-hidden="true"></i></button>
 							</div>
 						</div>
 		</div>
