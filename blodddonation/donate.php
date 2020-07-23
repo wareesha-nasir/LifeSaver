@@ -18,25 +18,29 @@ include('donar.php')
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#" style="color: white;">Hidden brand</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" style="color: white;"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item ">
-          <a class="nav-link" href="index.php" style="color: white;">Home </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="donate.php" style="color: white;">donate</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="signin.php" style="color: white;">Signin</a>
-          </li>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light"
+    >
+        <a class="navbar-brand" href="#" style="color: white;">Hidden brand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="color: white;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01"  >
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
+            <li class="nav-item ">
+              <a class="nav-link" href="index.php" style="color: white;">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="donate.php" style="color: white;" >donate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signin.php" style="color: white;">Signin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="data.php" style="color: white;">DONOR</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
       <div class="card mb-3" style="width: 100%; background:url('color.png')">
         <div class="row no-gutters">
           <div class="col-md-4">
@@ -63,6 +67,8 @@ include('donar.php')
                         <h3>SignUp</h3>
                         <hr class=red-bar>
                         <?php if(isset($termerror)) echo $termerror;
+                        if(isset($submit)) echo $submit;
+                        if(isset($submiterror)) echo $submiterror;
                         ?>
               <!-- Error Messages -->
     <form class="form-group" action="" method="post" novalidate="">
@@ -155,13 +161,13 @@ include('donar.php')
                  <!--city end-->
                 <div class="form-group">
                   <label for="password">Password</label>
-                  <input type="password" name="password" value="" placeholder="Password" class="form-control" required pattern="{6,}">
+                  <input type="password" name="password" value="" placeholder="Password" class="form-control" required pattern="{8,}">
                 </div>
                 
                 <!--End form-group-->
                 <div class="form-group">
                   <label for="password">Confirm Password</label>
-                  <input type="password" name="c_password" value="" placeholder="Confirm Password" class="form-control" required pattern="{6,}">
+                  <input type="password" name="c_password" value="" placeholder="Confirm Password" class="form-control" required pattern="{8,}">
                   <?php if(isset($passerror)) echo $passerror;?>
                 </div>
                 <!--End form-group-->

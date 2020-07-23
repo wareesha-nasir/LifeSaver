@@ -35,7 +35,7 @@
         width: 50%;
         height: 50%;
         text-align: left;
-        background-image: linear-gradient(315deg, #e26060 0%, #e23b51 74%);;
+        background-image: linear-gradient(315deg, #e26060 0%, #e23b51 74%);
         margin-left: 22%;
 		background-color: white;
 		border: .5px solid #eee;
@@ -65,15 +65,13 @@ box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
             <!-- Erorr Messages -->
     
                 <form action="" method="post" >
-                    <div class="imgcontainer" style="text-align: center; ">
-                        <img src="user.png" alt="Avatar" class="avatar" style="width: 5%; height: 5%; ">
-                      </div>
+                    
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email</label><br>
                         <input type="text" name="email_phone" class="form-control" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password">Password</label><br>
                         <input type="password" name="password" placeholder="Password" required class="form-control">
                     </div>
                     <div class="form-group">

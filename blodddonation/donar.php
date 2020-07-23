@@ -133,9 +133,9 @@ else{
     </button>
     </div>';
 }
-if(isset($_POST['password'])&&!empty($_POST['password']) &&isset($_POST['c_password'])&&!empty($_POST['c_assword'])){
-    if(strlen($_POST['password']>=8)){
-        if($_POST['password']==$_POST['c_password']){
+if(isset($_POST['password'])&& !empty($_POST['password']) ){
+    if(strlen($_POST['password'])>=8){
+        if($_POST['password']== $_POST['c_password']){
       $password=$_POST['password'];
         }
         else{
@@ -166,10 +166,10 @@ else{
     </div>';
 }
 if(isset($_POST['email'])&&!empty($_POST['email'])){
-    $pattern='/^[a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[_a-z0-9-]+)*(\.[a-z]{2,3})$/';
-    if(preg_match('/^[A-Za-z\s]+$/',$_POST['email'])){
+    $pattern='/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/';
+    if(preg_match($pattern,$_POST['email'])){
         $checkemail=$_POST['email'];
-        $sql="SELECT email from donar where email=$checkemail";
+        $sql="SELECT email FROM donar WHERE email='$checkemail'";
         $result=mysqli_query($connection,$sql);
         if(mysqli_num_rows($result)>0){
             $emailerror='<div class="alert alert-danger alert dismissible fade show" role="alert">
@@ -198,6 +198,27 @@ else{
     <span aria-hidden="true">&times</span>
     </button>
     </div>';
+}
+if( isset($name) && isset($bgroup) &&isset($gender)&&isset($day)&&isset($mon)&&($year)
+&&isset($email)&&isset($city)&&isset($ct)&&isset($password)){
+    $donerdob=$year."-".$mon."-".$day;
+    $sqlinsert="INSERT INTO donar(name,gender,Email,phoneno,city,dob,passwords,save_life_date) 
+    VALUES('$name','$gender','$email','$ct','$city','$donerdob','$password',0)";
+    if(mysqli_query($connection,$sqlinsert)){
+        $submit='<div class="alert alert-success alert dismissible fade show" role="alert">
+        <strong>Data is inserted successfully</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times</span>
+        </button>
+        </div>';
+    }else{
+        $submiterror='<div class="alert alert-danger alert dismissible fade show" role="alert">
+        <strong>Please try again</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times</span>
+        </button>
+        </div>';
+    }
 }
     }
     else{
