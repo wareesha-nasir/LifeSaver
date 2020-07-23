@@ -202,8 +202,9 @@ else{
 if( isset($name) && isset($bgroup) &&isset($gender)&&isset($day)&&isset($mon)&&($year)
 &&isset($email)&&isset($city)&&isset($ct)&&isset($password)){
     $donerdob=$year."-".$mon."-".$day;
-    $sqlinsert="INSERT INTO donar(name,gender,Email,phoneno,city,dob,passwords,save_life_date) 
-    VALUES('$name','$gender','$email','$ct','$city','$donerdob','$password',0)";
+    $password=md5($password);
+    $sqlinsert="INSERT INTO donar(name,gender,Email,phoneno,city,dob,passwords,save_life_date,blood_group) 
+    VALUES('$name','$gender','$email','$ct','$city','$donerdob','$password',0,'$bgroup')";
     if(mysqli_query($connection,$sqlinsert)){
         $submit='<div class="alert alert-success alert dismissible fade show" role="alert">
         <strong>Data is inserted successfully</strong>

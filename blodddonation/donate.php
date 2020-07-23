@@ -74,15 +74,16 @@ include('donar.php')
     <form class="form-group" action="" method="post" novalidate="">
                         <div class="form-group">
                             <label for="fullname">Full Name</label>
-                            <input type="text" name="name" id="fullname" placeholder="Full Name" required pattern="[A-Za-z/\s]+" title="Only lower and upper case and space" class="form-control">
-                            <?php if(isset($nameerror)) echo $nameerror;
-                        ?>
+                            <input type="text" name="name" id="fullname" placeholder="Full Name" required pattern="[A-Za-z/\s]+" 
+                            title="Only lower and upper case and space" class="form-control" value="<?php if(isset($name)) echo $name;?>">
+                            <?php if(isset($nameerror)) echo $nameerror;?>
                         </div><!--full name-->
                         <div class="form-group">
                   <label for="name">Blood Group</label><br>
                   <select class="form-control demo-default" id="blood_group" name="blood_group" required>
                     <option value="">---Select Your Blood Group---</option>
-                    <option value="A+">A+</option>
+                    <?php if(isset($bgroup)) echo '<option selected="" value="'.$bgroup.'">'.$bgroup.'</option>'; ?>
+                    <option  value="A+">A+</option>
                     <option value="A-">A-</option>
                     <option value="B+">B+</option>
                     <option value="B-">B-</option>
@@ -99,7 +100,7 @@ include('donar.php')
                         <div class="form-group">
                                   <label for="gender">Gender</label><br>
                                           Male<input type="radio" name="gender" id="gender" value="Male" style="margin-left:10px; margin-right:10px;" checked>
-                                          Fe-male<input type="radio" name="gender" id="gender" value="Fe-male" style="margin-left:10px;">
+                                          Female<input type="radio" name="gender" id="gender" value="Female" style="margin-left:10px;">
                                           <?php if(isset($gendererror)) echo $gendererror;
                         ?>
                         </div><!--gender-->
@@ -108,18 +109,29 @@ include('donar.php')
                   <br>
                   <select class="form-control demo-default" id="day" name="day" style="margin-bottom:10px;" required>
                     <option value="">---Date---</option>
-                    <option value="01" >01</option><option value="02" >02</option><option value="03" >03</option><option value="04" >04</option><option value="05" >05</option><option value="06" >06</option><option value="07" >07</option> <option value="08" >08</option><option value="09" >09</option><option value="10" >10</option>
-                    <option value="11" >11</option><option value="12" >12</option><option value="13" >13</option><option value="14" >14</option><option value="15" >15</option><option value="16" >16</option><option value="17" >17</option><option value="18" >18</option><option value="19" >19</option><option value="20" >20</option>
-                    <option value="21" >21</option><option value="22" >22</option><option value="23" >23</option><option value="24" >24</option><option value="25" >25</option><option value="26" >26</option><option value="27" >27</option><option value="28" >28</option><option value="29" >29</option><option value="30" >30</option><option value="31" >31</option>
+                    <?php if(isset($day)) echo '<option selected="" value="'.$day.'">'.$day.'</option>'; ?>
+                    <option value="01" >01</option><option value="02" >02</option><option value="03" >03</option>
+                    <option value="04" >04</option><option value="05" >05</option><option value="06" >06</option>
+                    <option value="07" >07</option> <option value="08" >08</option>
+                    <option value="09" >09</option><option value="10" >10</option>
+                    <option value="11" >11</option><option value="12" >12</option><option value="13" >13</option>
+                    <option value="14" >14</option><option value="15" >15</option>
+                    <option value="16" >16</option><option value="17" >17</option>
+                    <option value="18" >18</option><option value="19" >19</option><option value="20" >20</option>
+                    <option value="21" >21</option><option value="22" >22</option><option value="23" >23</option>
+                    <option value="24" >24</option><option value="25" >25</option><option value="26" >26</option>
+                    <option value="27" >27</option><option value="28" >28</option><option value="29" >29</option><option value="30" >30</option><option value="31" >31</option>
                     
                   </select>
                   
                   <select class="form-control demo-default" name="month" id="month" style="margin-bottom:10px;" required>
                     <option value="">---Month---</option>
+                    <?php if(isset($mon)) echo '<option selected="" value="'.$mon.'">'.$mon.'</option>'; ?>
                     <option value="01" >January</option><option value="02" >February</option><option value="03" >March</option><option value="04" >April</option><option value="05" >May</option><option value="06" >June</option><option value="07" >July</option><option value="08" >August</option><option value="09" >September</option><option value="10" >October</option><option value="11" >November</option><option value="12" >December</option>
                   </select>
                   <select class="form-control demo-default" id="year" name="year" style="margin-bottom:10px;" required>
                     <option value="">---Year---</option>
+                    <?php if(isset($year)) echo '<option selected="" value="'.$year.'">'.$year.'</option>'; ?>
                     <option value="1957" >1957</option><option value="1958" >1958</option><option value="1959" >1959</option><option value="1960" >1960</option><option value="1961" >1961</option><option value="1962" >1962</option><option value="1963" >1963</option><option value="1964" >1964</option><option value="1965" >1965</option><option value="1966" >1966</option><option value="1967" >1967</option><option value="1968" >1968</option><option value="1969" >1969</option>
                     <option value="1970" >1970</option><option value="1971" >1971</option><option value="1972" >1972</option><option value="1973" >1973</option><option value="1974" >1974</option><option value="1975" >1975</option><option value="1976" >1976</option><option value="1977" >1977</option><option value="1978" >1978</option>
                     <option value="1979" >1979</option><option value="1980" >1980</option><option value="1981" >1981</option><option value="1982" >1982</option><option value="1983" >1983</option><option value="1984" >1984</option><option value="1985" >1985</option><option value="1986" >1986</option><option value="1987" >1987</option><option value="1988" >1988</option><option value="1989" >1989</option><option value="1990" >1990</option>
@@ -132,19 +144,22 @@ include('donar.php')
                 <!--End form-group-->
                         <div class="form-group">
                             <label for="fullname">Email</label>
-                            <input type="text" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please write correct email" class="form-control">
+                            <input type="text" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please write correct email" 
+                            class="form-control" value="<?php if(isset($email)) echo $email;?>">
                             <?php if(isset($emailerror)) echo $emailerror;?>
                           </div>
                         
                         <div class="form-group">
                   <label for="contact_no">Contact No</label>
-                  <input type="text" name="contact_no" value="" placeholder="03********" class="form-control" required pattern="^\d{11}$" title="11 numeric characters only" maxlength="11">
+                  <input type="text" name="contact_no" placeholder="03********" class="form-control" required pattern="^\d{11}$" title="11 numeric characters only" 
+                  maxlength="11" value="<?php if(isset($ct)) echo $ct;?>">
                  <?php if(isset($cterror)) echo $cterror;?></div>
                 <!--End form-group-->
                         <div class="form-group">
                   <label for="city">City</label>
                   <select name="city" id="city" class="form-control demo-default" required>
-        <option value="">-- Select --</option><optgroup title="Azad Jammu and Kashmir (Azad Kashmir)" label="&raquo; Azad Jammu and Kashmir (Azad Kashmir)"></optgroup><option value="Bagh" >Bagh</option><option value="Bhimber" >Bhimber</option><option value="Kotli" >Kotli</option><option value="Mirpur" >Mirpur</option><option value="Muzaffarabad" >Muzaffarabad</option><option value="Neelum" >Neelum</option><option value="Poonch" >Poonch</option><option value="Sudhnati" >Sudhnati</option><optgroup title="Balochistan" label="&raquo; Balochistan"></optgroup><option value="Awaran" >Awaran</option><option value="Barkhan" >Barkhan</option><option value="Bolan" >Bolan</option>
+        <option value="">-- Select --</option><?php if(isset($city)) echo '<option selected="" value="'.$city.'">'.$city.'</option>'; ?>
+        <optgroup title="Azad Jammu and Kashmir (Azad Kashmir)" label="&raquo; Azad Jammu and Kashmir (Azad Kashmir)"></optgroup><option value="Bagh" >Bagh</option><option value="Bhimber" >Bhimber</option><option value="Kotli" >Kotli</option><option value="Mirpur" >Mirpur</option><option value="Muzaffarabad" >Muzaffarabad</option><option value="Neelum" >Neelum</option><option value="Poonch" >Poonch</option><option value="Sudhnati" >Sudhnati</option><optgroup title="Balochistan" label="&raquo; Balochistan"></optgroup><option value="Awaran" >Awaran</option><option value="Barkhan" >Barkhan</option><option value="Bolan" >Bolan</option>
         <option value="Chagai" >Chagai</option><option value="Dera Bugti" >Dera Bugti</option><option value="Gwadar" >Gwadar</option><option value="Jafarabad" >Jafarabad</option><option value="Jhal Magsi" >Jhal Magsi</option><option value="Kalat" >Kalat</option><option value="Kech" >Kech</option><option value="Kharan" >Kharan</option><option value="Khuzdar" >Khuzdar</option><option value="Kohlu" >Kohlu</option><option value="Lasbela" >Lasbela</option><option value="Loralai" >Loralai</option><option value="Mastung" >Mastung</option><option value="Musakhel" >Musakhel</option><option value="Naseerabad" >Naseerabad</option><option value="Nushki" >Nushki</option>
         <option value="Panjgur" >Panjgur</option><option value="Pishin" >Pishin</option><option value="Qilla Abdullah" >Qilla Abdullah</option><option value="Qilla Saifullah" >Qilla Saifullah</option><option value="Quetta" >Quetta</option><option value="Sibi" >Sibi</option><option value="Zhob" >Zhob</option><option value="Ziarat" >Ziarat</option><optgroup title="Federally Administered Tribal Areas (FATA" label="&raquo; Federally Administered Tribal Areas (FATA"></optgroup><option value="Bajaur Agency" >Bajaur Agency</option><option value="Khyber Agency" >Khyber Agency</option><option value="Kurram Agency" >Kurram Agency</option><option value="Mohmand Agency" >Mohmand Agency</option>
         <option value="North Waziristan Agency" >North Waziristan Agency</option><option value="Orakzai Agency" >Orakzai Agency</option><option value="South Waziristan Agency" >South Waziristan Agency</option><optgroup title="Islamabad Capital" label="&raquo; Islamabad Capital"></optgroup><option value="Islamabad" >Islamabad</option><optgroup title="North-West Frontier Province (NWFP)" label="&raquo; North-West Frontier Province (NWFP)"></optgroup>
@@ -172,7 +187,7 @@ include('donar.php')
                 </div>
                 <!--End form-group-->
                 <div class="form-inline">
-                  <input type="checkbox" name="term" value="true" required style="margin-left:10px;">
+                  <input type="checkbox" checked="" name="term" value="true" required style="margin-left:10px;">
                   <span style="margin-left:10px;"><i>I am agree to donate my blood and show my Name, Contact Nos. and E-Mail in Blood donors List</i></span>
                 </div><!--End form-group-->
                 

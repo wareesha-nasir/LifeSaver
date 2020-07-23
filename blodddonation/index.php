@@ -53,9 +53,11 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 col-sm-12">
-			<div class="form-inline text-center" style="margin-left: 33%;"  >
-							<div class="form-group text-center center-aligned"  >
+      <div class="col-md-6 offset-md-3" >
+        <form action="search.php" method="get" class="form-inline text-center" style="padding: 40px 0px 0px 5px;
+        margin-left:15%;">
+		
+							<div class="form-group text-center justify-content-center"  >
 								<select style="width: 220px; height: 45px;" name="city" id="city" class="form-control demo-default" required>
   <option value="">-- Select --</option><optgroup title="Azad Jammu and Kashmir (Azad Kashmir)" label="&raquo; Azad Jammu and Kashmir (Azad Kashmir)"></optgroup><option value="Bagh" >Bagh</option><option value="Bhimber" >Bhimber</option>
   <option value="Kotli" >Kotli</option><option value="Mirpur" >Mirpur</option><option value="Muzaffarabad" >Muzaffarabad</option><option value="Neelum" >Neelum</option><option value="Poonch" >Poonch</option><option value="Sudhnati" >Sudhnati</option><optgroup title="Balochistan" label="&raquo; Balochistan"></optgroup><option value="Awaran" >Awaran</option><option value="Barkhan" >Barkhan</option><option value="Bolan" >Bolan</option><option value="Chagai" >Chagai</option>
@@ -91,9 +93,10 @@
               </div>
               
 							<div class="form-group center-aligned">
-								<button type="button" class="btn btn-lg btn-default" id="search" ><i class="fa fa-search" aria-hidden="true"></i></button>
+								<button type="submit" class="btn btn-lg btn-default" id="search" ><i class="fa fa-search" aria-hidden="true"></i></button>
 							</div>
-						</div>
+              </form>
+        
 		</div>
 	</div>
 
