@@ -1,5 +1,6 @@
 <?php
-include('connect.php')
+include('connect.php');
+include('add.php');
 ?>
 
 <!DOCTYPE html>
@@ -68,29 +69,7 @@ include('connect.php')
 </style>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light"
-    >
-        <a class="navbar-brand" href="#" style="color: white;">Hidden brand</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" style="color: white;"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01"  >
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
-            <li class="nav-item ">
-              <a class="nav-link" href="index.php" style="color: white;">Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="donate.php" style="color: white;" >donate</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="signin.php" style="color: white;">Signin</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="data.php" style="color: white;">Donar</a>
-              </li>
-          </ul>
-        </div>
-      </nav>
+   
 
       <div class="container-fluid red-background size" style="background-image: linear-gradient(315deg, #f55656 0%, #f11c39 74%);">
 	<div class="row" >
@@ -136,14 +115,15 @@ echo'<div class="col-md-3 col-sm-12 col-lg-3 donors_data">
                 <span>'.$row['blood_group'].'</span>
                 <span>'.$row['Email'].'</span>
                 <span>'.$row['phoneno'].'</span>
-               ';
+              </div> ';
             }else{ 
                 echo'<div class="col-md-3 col-sm-12 col-lg-3 donors_data">
                 <span class="name">'.$row['name'].'</span>
                 <span >'.$row['city'].'</span>
                 <span >'.$row['gender'].'</span>
                 <span >'.$row['blood_group'].'</span>
-                <h4 class="name text-center">DONATED</h4>';
+                <h4 class="name text-center">DONATED</h4>
+                </div>';
 
 
             }

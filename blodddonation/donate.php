@@ -1,6 +1,7 @@
 <?php
 include('connect.php');
-include('donar.php')
+include('donar.php');
+include('add.php');
 ?>
 
 <!DOCTYPE html>
@@ -18,33 +19,11 @@ include('donar.php')
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light"
-    >
-        <a class="navbar-brand" href="#" style="color: white;">Hidden brand</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" style="color: white;"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01"  >
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
-            <li class="nav-item ">
-              <a class="nav-link" href="index.php" style="color: white;">Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="donate.php" style="color: white;" >donate</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="signin.php" style="color: white;">Signin</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="data.php" style="color: white;">DONOR</a>
-              </li>
-          </ul>
-        </div>
-      </nav>
+
       <div class="card mb-3" style="width: 100%; background:url('color.png')">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="bg.png" class="card-img" >
+            <img src="bd.jpg" class="card-img" >
           </div>
           <div class="col-md-8">
             <div class="card-body">

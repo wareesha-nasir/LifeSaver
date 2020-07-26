@@ -1,3 +1,6 @@
+<?php
+include("add.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +16,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light"
+    <!--<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light"
     >
         <a class="navbar-brand" href="#" style="color: white;">Hidden brand</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +35,7 @@
               </li>
           </ul>
         </div>
-      </nav>
+      </nav>-->
       <div class="row" >
         <div class="col-md-12">
             <div class="card bg-light text-white" >
