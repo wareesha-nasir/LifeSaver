@@ -1,5 +1,6 @@
 <?php
 include('connect.php');
+include('navbar.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +9,7 @@ include('connect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="donate.css">
+	<link rel="stylesheet" href="nav.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -68,9 +70,6 @@ include('connect.php');
         </style>
 </head>
 <body>
-<?php
-include('add.php');
-?>
 <div class="container-fluid red-background size" style="background-image: linear-gradient(315deg, #f55656 0%, #f11c39 74%);">
 	<div class="row" >
 		<div class="col-md-6 offset-md-3">
