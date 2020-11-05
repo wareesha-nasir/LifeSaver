@@ -16,37 +16,13 @@ include("navbar.php");
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!--<nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light"
-    >
-        <a class="navbar-brand" href="#" style="color: white;">Hidden brand</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" style="color: white;"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01"  >
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
-            <li class="nav-item ">
-              <a class="nav-link" href="index.php" style="color: white;">Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="donate.php" style="color: white;" >donate</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="signin.php" style="color: white;">Signin</a>
-              </li>
-          </ul>
-        </div>
-      </nav>-->
-      <div class="row" >
-        <div class="col-md-12">
-            <div class="card bg-light text-white" >
-                <img src="blood-donor.jpg" class="card-img" alt="...">
-                <div class="card-img-overlay">
-                  <h3 class="card-title">Donate Blood</h3>
-                  <h3 class="sub-title">Save Lives</h3>
-                </div>
-              </div>
+      <div class="row bg-image" >
+        <div class="col-md-12 donate-h1">
+                <h1>Donate Blood </h1>
+                <h4 class='donate-h4'>Save Life </h4>
         </div>
     </div>
+	
     <br><br><br> 
     <!-- donate section -->
     <div class="row">
@@ -96,7 +72,7 @@ include("navbar.php");
               </div>
               
 							<div class="form-group center-aligned">
-								<button type="submit" class="btn btn-lg btn-default" id="search" ><i class="fa fa-search" aria-hidden="true"></i></button>
+								<button type="submit" class="btn btn-nav transparent" id="search" ><i class="fa fa-search" aria-hidden="true"></i></button>
 							</div>
               </form>
         
@@ -106,8 +82,8 @@ include("navbar.php");
 			<div class="container-fluid red-background" id="about">
 				<div class="row" >
 					<div class="col-md-12" style="background-image: linear-gradient(315deg, #eb6a6a 10%, #ca1028 74%);">
-						<h2 class="text-center"  style="color: white; font-weight: 500;padding: 10px 0 0 0; font-family: 'Merriweather',serif
-                        ;">LIFE SAVER</h2>
+						<h2 class="text-center"  style="color: white; font-weight: 500;padding: 10px 0 0 0; font-family: 'Roboto',sans-serif;
+                        ">LIFE SAVER</h2>
 						<hr class="white-bar" style="background-color: white; width:50%">
 						<p  style="color: white; font-size: 20px; text-align: justify; font-family: 'Roboto',sans-serif;"> 
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
