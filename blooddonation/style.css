@@ -3,12 +3,29 @@ body{
     margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    font-family: 'Merriweather',serif;
-    
+    background-color:rgb(241, 242, 243);
 }
 img{
     width:100%;
     height: 70vh;
+}
+.bg-image{
+    background-image: url("blood-donor.jpg");
+    background-size: cover;
+}
+.donate-h1 h1{
+    text-align: center;
+    font-size: 4.5rem;
+    padding-top:15%;
+    margin-bottom: 0%;
+    color: rgb(155, 2, 2);
+}
+.donate-h1 h4{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 0%;
+    color: rgb(223, 222, 222);
+    padding-bottom: 20%;
 }
 nav{
    
@@ -29,7 +46,7 @@ ul li a:hover{
     color:rgb(10, 10, 10);
 }
 
-h3, .card-title{
+/*h3, .card-title{
     color: rgb(180, 5, 5);
     text-align: center;
     margin-top: 10%;
@@ -40,4 +57,4 @@ h3, .card-title{
     text-transform: uppercase;
     font-family: 'Roboto',sans-serif;
     text-align: center;
-}
+}*/
